@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">ToDoApp</string>
+    <string name="task_title">Task</string>
+    <string name="add_task">Add Task</string>
+    <string name="today">Today</string>
+    <string name="tomorrow">Tomorrow</string>
+    <string name="upcoming">Next Upcoming</string>
+    <string name="task_desc">Task Description</string>
+    <string name="create">New Task</string>
+    <string name="todo">To Do</string>
+    <string name="close">Close</string>
+    <string name="done">Done</string>
+    <string name="task">Task Name</string>
+    <string name="task_date">Task Date</string>
+    <string name="o">o</string>
+    <string name="task_name">Task Name</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+    <string name="task_time">Task Time</string>
+    <string name="checkbox">CheckTask</string>
+    <string name="big_dot"><![CDATA[&#11044;]]></string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="yes">Yes</string>
+    <string name="cancel">Cancel</string>
+    <string name="menu">Menu</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_reset">Reset</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="action_bar_up_description">Action Bar Up</string>
+</resources>

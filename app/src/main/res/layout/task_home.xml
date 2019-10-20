@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#262E33">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/task_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/AppTheme"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical|start"
+                android:paddingStart="16dp"
+                android:paddingLeft="16dp"
+                android:paddingEnd="4dp"
+                android:paddingRight="4dp"
+                android:text="@string/task_title"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/task_toolbar"
+        android:layout_gravity="fill_vertical"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:isScrollContainer="false"
+        android:visibility="visible"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/todayText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/today"
+                android:textSize="18sp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary"
+                android:descendantFocusability="blocksDescendants"
+                android:layout_marginRight="12dp"
+                android:layout_marginLeft="12dp">
+
+                <com.example.todoapp.NoScrollListView
+                    android:id="@+id/taskListToday"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?attr/colorPrimary"
+                    android:divider="#333232"
+                    android:dividerHeight="1dp"
+                    android:visibility="visible"/>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tomorrowText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/tomorrow"
+                android:textSize="18sp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary"
+                android:descendantFocusability="blocksDescendants"
+                android:layout_marginRight="12dp"
+                android:layout_marginLeft="12dp">
+
+                <com.example.todoapp.NoScrollListView
+                    android:id="@+id/taskListTomorrow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?attr/colorPrimary"
+                    android:divider="#333232"
+                    android:dividerHeight="1dp"
+                    android:visibility="visible"/>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/upcomingText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/upcoming"
+                android:textSize="18sp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary"
+                android:descendantFocusability="blocksDescendants"
+                android:layout_marginRight="12dp"
+                android:layout_marginLeft="12dp">
+
+                <com.example.todoapp.NoScrollListView
+                    android:id="@+id/taskListUpcoming"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?attr/colorPrimary"
+                    android:divider="#333232"
+                    android:dividerHeight="1dp"
+                    android:visibility="visible"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        android:contentDescription="@string/add_task"
+        android:focusable="true"
+        android:onClick="openAddTask"
+        app:backgroundTint="?attr/colorAccent"
+        app:srcCompat="@drawable/ic_action_add" />
+
+</RelativeLayout>
